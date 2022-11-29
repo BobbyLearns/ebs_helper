@@ -209,7 +209,7 @@ elif (len(frames_to_create_new_video) > 0):
 elif (len(frames_to_overlay_over_original_video) > 0):
     print("Attempting to overlay frames over original video")
     output_filename = my_file+'ebsynthed_with_overlay.mp4'
-    ffmpeg_command = 'ffmpeg -i '+original_video_pull_frames_from+' -framerate '+ffprobe_framerate+' -i "'+frames_to_overlay_over_original_video+'" -filter_complex "[1:v][0:v]scale2ref=iw:ih[ovr][base];  [ovr]colorchannelmixer=aa=1.0[ovrl]; [base][ovrl]overlay[v]" -map [v] -map 0:a ' + output_filename
+    ffmpeg_command = 'ffmpeg -hide_banner -n -i '+original_video_pull_frames_from+' -framerate '+ffprobe_framerate+' -i "'+frames_to_overlay_over_original_video+'" -filter_complex "[1:v][0:v]scale2ref=iw:ih[ovr][base];  [ovr]colorchannelmixer=aa=1.0[ovrl]; [base][ovrl]overlay[v]" -map [v] -map 0:a ' + output_filename
     print("Running command:")
     print(ffmpeg_command)
     create_video_output = subprocess.getoutput(ffmpeg_command)
