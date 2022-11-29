@@ -1,3 +1,17 @@
+# Needed items:
+# Python
+#  - typing 
+#     python --version
+#    onto the command prompt will return informattion
+# ffmpeg on path
+#  - typing 
+#     ffmpeg
+#    onto the command prompt will return informattion
+# ffprobe on path
+#  - typing 
+#     ffprobe
+#    onto the command prompt will return informattion
+
 # An example directory structure looks like this:
 # project
 #    \___ original_input.mp4 (original video)
@@ -9,7 +23,7 @@
 #            \___ ......png
 #            \___ 00646.png (or however many frames)
 #
-#  |____ ebsynth_out (create this manually, set as output on ebsynth, ebsynth will fill with frames)
+#  |____ ebsynth_output (create this manually, set as output on ebsynth, ebsynth will fill with frames)
 #            \___ 00001.png
 #            \___ ......png
 #            \___ 00646.png (or however many frames)
@@ -28,10 +42,10 @@ from decimal import Decimal
 from os.path import exists
 
 
-config = configparser.ConfigParser()
-config.read('FILE.INI')
+# Will be adding a config reader here in the future
+#config = configparser.ConfigParser()
+#config.read('FILE.INI')
 
-skip_frame_extraction = True
 skip_frame_extraction = False
 use_text_file_for_frame_list = False
 force_attempt_to_create_video_even_if_no_first_frame = True
@@ -89,7 +103,7 @@ print("Input video:    "+original_video_pull_frames_from)
 
 frames_to_create_new_video = ""
 frames_to_overlay_over_original_video = ""
-frames_to_overlay_over_original_video = base_directory + "\\ebsynth_out\\%05d.png"
+frames_to_overlay_over_original_video = base_directory + "\\ebsynth_output\\%05d.png"
 
 
 numbering_for_new_frames = "%05d"
