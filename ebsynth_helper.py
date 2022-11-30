@@ -1,16 +1,27 @@
 # Needed items:
 # Python
+# https://www.python.org/downloads/
 #  - typing 
 #     python --version
-#    onto the command prompt will return informattion
+#    onto the command prompt will return information
 # ffmpeg on path
+# https://ffmpeg.org/download.html
 #  - typing 
 #     ffmpeg
-#    onto the command prompt will return informattion
+#    onto the command prompt will return information
 # ffprobe on path
+# Comes with ffmpeg usually
 #  - typing 
 #     ffprobe
-#    onto the command prompt will return informattion
+#    onto the command prompt will return information
+
+# Example Use:
+# > python ebsynth_helper.py C:\Videos\subfolderformyvideo\myvideo.mp4
+# Create a keyframe for ebsynth
+# Create the subdirectory C:\Videos\subfolderformyvideo\ebsynth_output
+# Run ebsynth, with all output frames going to ebsynth_output
+# > python ebsynth_helper.py C:\Videos\subfolderformyvideo\myvideo.mp4
+#   -- this is the same command as before --
 
 # An example directory structure looks like this:
 # project
