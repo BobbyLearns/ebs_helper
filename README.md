@@ -1,18 +1,18 @@
 # For use with ebsynth, use the script to extract frames, you'll manually run ebsynth, and then use the script to create a final video
  Needed items:
- Python
+ - Python
  https://www.python.org/downloads/
-  - typing 
+  typing 
      python --version
     onto the command prompt will return information
- ffmpeg on path
+ - ffmpeg on path
  https://ffmpeg.org/download.html
-  - typing 
+  typing 
      ffmpeg
     onto the command prompt will return information
- ffprobe on path
+ - ffprobe on path
  Comes with ffmpeg usually
-  - typing 
+  typing 
      ffprobe
     onto the command prompt will return information
 
